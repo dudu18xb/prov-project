@@ -1,0 +1,20 @@
+@media screen and (max-width: 1024px) {
+    .menu-fixo-rodape{
+        margin-top: 0;
+    }
+    .menu-fixo-rodape > ul > li > a{
+        padding: 5px 10px;
+    }
+    .menu-fixo-rodape ul{
+        padding: 0px 40px;
+    }
+    .preve-descricao.home{
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    a.btn-google {
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,219 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat|Roboto';
+
+$claro: #ccc;
+$preto: #000;
+$branco: #fff;
+$escuro: #333;
+$red: #F00;
+$clarinho: #f1f1f1;
+$texto: Montserrat, Verdana, Tahoma;
+$titulo: Roboto, Tahoma;
+$corpadraoescuro: #0c0482;
+$fundoportifolio: #ececec;
+$azulmenu: #0c0482;
+// cores padroes site
+$orange: #FF9F00;
+$orange-hover: #e38c00;
+
+* { margin: 0px; padding: 0px; text-decoration: none; box-sizing: border-box;} /*para definir tudo como padrao e o (*) serve para tudo o que vc for colocar na tela*/
+header{
+    float: left;
+    padding: 0px;
+
+}
+body {
+    padding:0px;
+    margin:0px;
+    background-color: #fff;
+    font-size: 62.5%;
+    background: #fff;
+}
+.conteudo-centro {
+    width: 100%;
+}
+.conteudo-centro > img{
+    width: 100%;
+    float: left;
+    padding: 0px 0px;
+    height: auto;
+}
+.conteudo-centro h1{
+    font-size: 1.7em;
+}
+.data-publicacao > p {
+    font-size: 1.0em;
+    background: $orange-hover;
+    padding: 6px 5px;
+    color: #fff;
+    float: right;
+    margin-bottom: 0px;
+}
+.preve-descricao p {
+    width: 100%;
+    margin-top: 10px;
+    float: left;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+.btn-padrao-app{
+    float: right;
+    background: $orange !important;
+    border: 0 !important;
+    width: 100%;
+    padding: 10px 0px !important;
+    font-size: 20px !important;
+    &:hover{
+        background: $orange !important;
+    }
+}
+.mm-listview>li>a, .mm-listview>li>span{
+    padding: 20px 12px 20px 20px;
+    margin: 0;
+    font-size: 18px;
+}
+.redes-sociais > a{
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+.redes-sociais {
+    border-bottom: 1px solid #ccc;
+}
+.preve-descricao.home {
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid $orange-hover;
+    padding-bottom: 55px;
+    margin-bottom: 50px;
+}
+.centro-erro > img {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.centro-erro {
+    width: 100%;
+}
+.container.erro{
+    background: #000;
+    padding-bottom: 213px;
+}
+.container.erro button{
+    margin: 0px 100px 0px 100px;
+}
+.container.erro h3{
+    color: #fff;
+    text-align: center;
+}
+.tituloconteudo{
+    background: #fff;
+    color: $orange;
+    margin-top: 6px;
+    padding: 5px 0px 5px 0px;
+}
+.tituloconteudo h2{
+    text-align: left;
+    border-bottom: 1px solid $orange;
+    padding-bottom: 10px;
+}
+.menu-fixo-rodape{
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    background: $orange;
+}
+// rodape do menu
+.menu-fixo-rodape ul {
+    float: left;
+    list-style: none;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 25px;
+}
+.menu-fixo-rodape li {
+    position: relative;
+    float: left;
+    border: 1px solid #fff;
+    width: 100%;
+}
+.mh-btns-left{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+.mh-btns-left a:focus{
+    color: #c7c7c7;
+    text-decoration: none;
+}
+.menu-fixo-rodape > ul > li > a {
+    color: #ffffff;
+    background: $orange;
+    text-decoration: none;
+    padding: 12px 10px;
+    float: left;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    &:hover{
+        background: $orange-hover;
+        transition: 0.3s;
+    }
+}
+.menu-fixo-rodape {
+    margin-top: 10px;
+}
+// estilizando o headers
+.mh-head {
+    background: $orange !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    font-size: 1.4em !important;
+}
+.mh-head a:hover {
+    color: #ffffff !important;
+}
+.mm-menu .mm-navbar a, .mm-menu .mm-navbar>* {
+    color: #fff !important;
+    font-weight: 600 !important;
+    font-size: 1.3em !important;
+}
+.mm-listview > li > a {
+    color: #fff !important;
+}
+.mm-listview>li, .mm-listview>li .mm-next, .mm-listview>li .mm-next:before, .mm-listview>li:after {   
+    color: #fff !important;
+}
+.mm-listview>li {
+    border-color: #fff !important;
+}
+.mm-navbar {
+    border-bottom: 1px solid #fff !important;
+}
+.mm-menu .mm-listview>li .mm-next:after {
+    border-color: #fff !important;
+}
+.mm-menu .mm-btn:after, .mm-menu .mm-btn:before {
+    border-color: #fff !important;
+}
+.mm-menu {
+    background: $orange-hover !important;
+    border-color: #fff !important;
+    color: #000 !important;
+}
+.breadcrumb {
+    background-color: #004786 !important;
+    margin-top: 10px !important;
+}
+.breadcrumb>li {
+    color: #fff !important;
+}
+.breadcrumb a {
+    color: #000 !important;
+}
