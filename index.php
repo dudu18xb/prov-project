@@ -1,58 +1,103 @@
+<?php include "controller/conecta.php" ?>
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Sistema de Gerenciameno</title>
-        <meta charset="utf-8">
-        <meta name="theme-color" content="#a60000"> <!-- MUDANDO A COR DA URL NA VERSAO MOBILE -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- para nao dar zoom -->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/jquery.autocomplete.css">
-        <link rel="stylesheet" type="text/css" href="css/datepicker.css">
-        <link href="images/icon.png" rel="shortcut icon">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-        <script type="text/javascript" src="js/jquery-3.2.1.min"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap-inputmask.min.js"></script>
-        <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
-        <script type="text/javascript" src="js/jquery.autocomplete.js"></script>
-        <script type="text/javascript" src="js/npm.js"></script>
-        <link href="css/elegant-icons-style.css" rel="stylesheet" />
-        <link href="css/font-awesome.css" rel="stylesheet" />
-        <link href="css/nicestyle.css" rel="stylesheet">
-        <link href="css/style-responsive.css" rel="stylesheet" />
+    <title>Developer Front-End | Eduardo Rocha</title>
 
-        <script>
-            $(function () {
-                $("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
-            });
-        </script>
-    </head>
-    <body class="login-img3-body">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
 
-        <div class="container-login">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'>
 
-            <form name="login" method="post" action="verificar.php" novalidate class="login-form">       
-                <div class="login-wrap">
-                    <p class="login-img"><img src="images/logodamiana.png"></i></p>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="icon_profile"></i></span>
-                        <input type="text" name="login" required
-                               data-validation-required-message="Digite o Login"
-                               class="form-control" placeholder="Digite seu login" autofocus>
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="icon_key_alt"></i></span>
-                        <input type="password" name="senha" required
-                               data-validation-required-message="Digite sua senha"
-                               class="form-control" placeholder="Digite sua senha" autofocus>
-                    </div>
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Logar</button>
-                </div>
-            </form>
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
-    </body>
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Eduardo Rocha</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#services">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#portfolio">Portfólio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main>
+    <?php
+    //print_r( $_GET );
+
+    if (isset($_GET["p"])) {
+        //se o parametro p existe
+        $p = trim($_GET["p"]);
+
+        //separar por / produto/111
+        //pagina - produto
+        //codigo - 111
+        $p = explode("/", $p);
+
+        //print_r ( $p );
+        $pagina = $p[0]; //nome da página
+    } else {
+
+        $pagina = "home";
+    }
+
+    $pagina = "pages/$pagina.php";
+
+    if (file_exists($pagina))
+        include $pagina;
+    else
+        include "pages/erro.php";
+    ?>
+</main>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/creative.min.js"></script>
+
+</body>
 
 </html>

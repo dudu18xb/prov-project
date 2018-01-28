@@ -5,6 +5,6 @@
 	unset($_SESSION["id"]);
 	unset($_SESSION["login"]);
 	unset($_SESSION["nome"]);
-	unset($_SESSION["tentativas"]);
+	//unset($_SESSION["tentativas"]);
 
-	header("Location:index.php");
+	header("Location:../index.php");

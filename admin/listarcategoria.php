@@ -1,42 +1,47 @@
-<h1>Lista de Categorias</h1>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Visualizar Categoria
+        <small>Painel</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="home.php"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active" href="home.php?pg=listarcategoria">Visualizar de Categoria</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+                <!-- general form elements -->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Formulário de Cadastro</h3>
+                    </div>
 
-<div class="pull-right">
-    <a href="home.php?pg=categoria"
-       class="btn btn-primary" 
-       title="Novo Cadastro">
-        Novo Cadastro de Categoria
-    </a>
-
-    <a href="home.php?pg=listarcategoria"
-       class="btn btn-success" title="Listar">
-        Visualizar Categorias Cadastradas
-    </a>
-</div>
-
-<div class="clearfix"></div>
-
-<table class="table table-striped 
-table-hover table-bordered">
-	<thead>
-		<th style="text-align: center;">ID</th>
-		<th style="text-align: center;">Nome da Categoria</th>
-		<th width="25%" style="text-align: center;">Opções</th>
-	</thead>
-
-	<?php
-		//sql para selecionar as plataformas
-		$sql = "select * from categoria
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table class="table table-bordered">
+                            <thead>
+                            <th>ID</th>
+                            <th>Nome da Categoria</th>
+                            <th width="25%" style="text-align: center;">Opções</th>
+                            </thead>
+                            <?php
+                            //sql para selecionar as plataformas
+                            $sql = "select * from categoria
 		order by nome";
-		$consulta = $con->prepare($sql);
-		//executo o sql
-		$consulta->execute();
-		//gerar os dados na tela
-		while ($dados = $consulta->fetch(PDO::FETCH_OBJ)) {
-			//separar os dados
-			$id = $dados->id;
-			$nome = $dados->nome;
-			//mostrar os dados na linha da tabela
-			echo "<tr>
+                            $consulta = $con->prepare($sql);
+                            //executo o sql
+                            $consulta->execute();
+                            //gerar os dados na tela
+                            while ($dados = $consulta->fetch(PDO::FETCH_OBJ)) {
+                                //separar os dados
+                                $id = $dados->id;
+                                $nome = $dados->nome;
+                                //mostrar os dados na linha da tabela
+                                echo "<tr>
 				<td>$id</td>
 				<td>$nome</td>
 				<td>
@@ -52,9 +57,17 @@ table-hover table-bordered">
 					</a>
 				</td>
 			</tr>";
-		}
-	?>
-</table>
+                            }
+                            ?>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+        </div>
+</section>
 
 <script type="text/javascript">
 	function excluir(id) {

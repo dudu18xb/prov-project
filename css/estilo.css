@@ -1,0 +1,57 @@
+.link-portifolio{
+    text-align: center;
+    list-style: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    color: #f05f40;
+    font-weight: 600;
+    opacity: 1;
+    z-index: 999;
+    background: #fff;
+    border: 0;
+}
+.link-portifolio:hover{
+    text-decoration: none;
+    color: #000;
+    outline: 0;
+    transition: all .2s;
+}
+.link-portifolio:focus{
+    text-decoration: none;
+    color: #000;
+    outline: 0;
+    transition: all .2s;
+}
+.form-control{
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+}
+.form-control:hover{
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+.form-control:focus{
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #f05f40;
+    border-left: 1px solid #f05f40;
+    border-right: 1px solid #f05f40;
+}
+.control-group{
+    margin-bottom: 15px;
+}
+

@@ -1,12 +1,12 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Cadastro de Banner
+        Cadastro de Portifólio
         <small>Site</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="home.php"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active" href="home.php?pg=banner">Cadastro de Banner</li>
+        <li class="active" href="home.php?pg=portifolio">Cadastro de Portifólio</li>
     </ol>
 </section>
 
@@ -14,26 +14,27 @@
 
 <?php
 //edição dos dados
-$id = $titulo = $texto = $foto = "";
+$id = $id_categoria = $nome = $url = $foto = "";
 //verifica se foi enviado id por get
 if (isset($_GET["id"])) {
     $id = trim($_GET["id"]);
     //sql para selecionar a categoria
-    $sql = "select * from banner where id = ? limit 1";
+    $sql = "select * from portifolio where id = ? limit 1";
     $consulta = $con->prepare($sql);
     $consulta->bindParam(1, $id);
     $consulta->execute();
     $dados = $consulta->fetch(PDO::FETCH_OBJ);
     //separar os dados
     $id = $dados->id;
-    $titulo = $dados->titulo;
-    $texto = $dados->texto;
+    $id_categoria = $dados->id_categoria;
+    $nome = $dados->nome;
+    $url = $dados->url;
     $foto = $dados->foto;
 }
 ?>
 <!-- Main content -->
 <section class="content">
-    <form name="form1" method="post" novalidate action="home.php?pg=salvarbanner" enctype="multipart/form-data">
+    <form name="form1" method="post" novalidate action="home.php?pg=salvarportifolio" enctype="multipart/form-data">
         <div class="row">
             <input type="hidden" name="id"
                    class="form-control" readonly
@@ -49,21 +50,46 @@ if (isset($_GET["id"])) {
                     <!-- form start -->
                     <form role="form">
                         <div class="box-body">
+
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Titulo</label>
+                                <label for="exampleInputEmail1">Seleciona a Categoria</label>
+                                <select name="id_categoria" required
+                                        data-validation-required-message="Selecione o a categoria"
+                                        class="form-control"
+                                        id="id_categoria">
+                                    <option selected="selected"></option>
+                                    <?php
+                                    $sql = "select * from categoria order by nome";
+                                    $consulta = $con->prepare($sql);
+                                    $consulta->execute();
+                                    while ($dados = $consulta->fetch(PDO::FETCH_OBJ)) {
+                                        $id_categoria = $dados->id;
+                                        $nome_categoria = $dados->nome;
+
+                                        echo "<option value='$id_categoria'>$nome_categoria</option>";
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                            <script type="text/javascript">
+                                $("#id_categoria").val(<?= $id_categoria; ?>);
+                            </script>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nome</label>
                                 <input type="text" required
-                                       name="titulo"
-                                       class="form-control" value="<?= $titulo; ?>"
+                                       name="nome"
+                                       class="form-control" value="<?= $nome; ?>"
                                        data-validation-required-message="Preencha O titulo"
-                                       placeholder="Insere o Titulo do Banner, Max de Caracteres: 50 caracteres">
+                                       placeholder="Insere o Nome como Titulo do portifólio">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Texto</label>
+                                <label for="exampleInputEmail1">URL</label>
                                 <input type="text" required
-                                       name="texto"
-                                       class="form-control" value="<?= $texto; ?>"
-                                       data-validation-required-message="Preencha o Texto"
-                                       placeholder="Insere o Texto do Banner, Max de Caracteres: 150 caracteres">
+                                       name="url"
+                                       class="form-control" value="<?= $url; ?>"
+                                       data-validation-required-message="Preencha a URL"
+                                       placeholder="Preenche a URL da Pagina">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputFile">Seleciona o Arquivo</label>
@@ -85,7 +111,7 @@ if (isset($_GET["id"])) {
                                 <th>Tamanho</th>
                             </tr>
                             <tr>
-                                <td>920 X 613</td>
+                                <td>650 X 350</td>
                             </tr>
                         </table>
                     </div>
