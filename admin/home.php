@@ -387,6 +387,7 @@ include "controller/login.php";
                         <li><a href="home.php?pg=listarcategoria"><i class="fa fa-tasks"></i> Categoria</a></li>
                         <li><a href="home.php?pg=listarbanner"><i class="fa fa-image"></i> Banner</a></li>
                         <li><a href="home.php?pg=listarportifolio"><i class="fa fa-joomla"></i> Portifólio</a></li>
+                        <li><a href="home.php?pg=listarcontato"><i class="fa fa-comments"></i> Contato</a></li>
                     </ul>
                 </li>
                 <li class="treeview">

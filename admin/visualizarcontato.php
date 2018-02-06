@@ -1,3 +1,12 @@
+<?php
+// recuperando os dados do id
+
+$id = $_GET["id"];
+
+$sql = "select * from contato where id = " . (int) $id . " limit 1";
+$consulta = $con->prepare($sql);
+$consulta->execute();
+?>
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
@@ -24,40 +33,39 @@
                     <div class="box-body">
                         <table class="table table-bordered">
                             <thead>
-                            <th>ID</th>
-                            <th>Nome da Categoria</th>
-                            <th width="25%" style="text-align: center;">Opções</th>
+                            <th>Nome solicitante</th>
+                            <th>Email</th>
                             </thead>
                             <?php
                             //sql para selecionar as plataformas
-                            $sql = "select * from contato
-		order by nome desc";
+                            $sql = "select * from contato where id = ".(int)$id;
                             $consulta = $con->prepare($sql);
-                            //executo o sql
+                            $consulta->bindParam(1, $id);
                             $consulta->execute();
                             //gerar os dados na tela
                             while ($dados = $consulta->fetch(PDO::FETCH_OBJ)) {
                                 //separar os dados
-                                $id = $dados->id;
                                 $nome = $dados->nome;
                                 $email = $dados->email;
+                                $assunto = $dados->assunto;
+                                $mensagem = $dados->mensagem;
                                 //mostrar os dados na linha da tabela
                                 echo "<tr>
-				<td>$id</td>
 				<td>$nome</td>
-				<td>
-					<a 
-					href='javascript:excluir($id)'
-					class='btn btn-danger'>
-						<i class='glyphicon glyphicon-trash'></i> Excluir
-					</a>
-
-					<a href='home.php?pg=visualizarcontato&id=$id'
-					class='btn btn-info'>
-						<i class='glyphicon glyphicon-pencil'></i> Visualizar
-					</a>
-				</td>
-			</tr>";
+				<td>$email</td>
+			</tr>
+			<tr>
+			<td><span style='font-weight: bold;'>Mensagem:</span> $mensagem</td>
+                </tr>
+			 <tfoot>
+                            <td>
+                                <a
+                                        href='javascript:excluir($id)'
+                                        class='btn btn-danger'>
+                                    <i class='glyphicon glyphicon-trash'></i> Excluir
+                                </a>
+                            </td>
+                            </tfoot>";
                             }
                             ?>
                             </tr>
