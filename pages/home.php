@@ -34,12 +34,10 @@ while ($dados = $consulta->fetch(PDO::FETCH_OBJ)) {
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <h2 class="section-heading text-white">We've got what you need!</h2>
+                <h2 class="section-heading text-white">Sobre Mim</h2>
                 <hr class="light my-4">
-                <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and
-                    running in no time! All of the templates and themes on Start Bootstrap are open source, free to
-                    download, and easy to use. No strings attached!</p>
-                <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+                <p class="text-faded mb-4">Sou programador Front-End e Back-End, tenho 19 Anos sou graduado na Faculdade Alfa de Umuarama, estudante de Pós Graduação Web Dev.</p>
+                <a class="btn btn-light btn-xl js-scroll-trigger" href="#services" title="Ir para pagina quem sou">O que Faço ?</a>
             </div>
         </div>
     </div>
@@ -49,7 +47,7 @@ while ($dados = $consulta->fetch(PDO::FETCH_OBJ)) {
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">At Your Service</h2>
+                <h2 class="section-heading">Serviços em que Realizo !</h2>
                 <hr class="my-4">
             </div>
         </div>
@@ -58,30 +56,30 @@ while ($dados = $consulta->fetch(PDO::FETCH_OBJ)) {
         <div class="row">
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box mt-5 mx-auto">
-                    <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-                    <h3 class="mb-3">Sturdy Templates</h3>
-                    <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+                    <i class="fa fa-4x fa-desktop text-primary mb-3 sr-icons"></i>
+                    <h3 class="mb-3">Front-End</h3>
+                    <p class="text-muted mb-0">O front-end é responsável em mostrar o visual da aplicação</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box mt-5 mx-auto">
-                    <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-                    <h3 class="mb-3">Ready to Ship</h3>
-                    <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+                    <i class="fa fa-4x fa-cog text-primary mb-3 sr-icons"></i>
+                    <h3 class="mb-3">Back-End</h3>
+                    <p class="text-muted mb-0">O back-end é o contrarregra por trás dessa interface, que trabalha do lado do servidor</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box mt-5 mx-auto">
-                    <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
-                    <h3 class="mb-3">Up to Date</h3>
-                    <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
+                    <i class="fa fa-4x fa-mobile text-primary mb-3 sr-icons"></i>
+                    <h3 class="mb-3">Responsivo</h3>
+                    <p class="text-muted mb-0">Aparência e disposição com base no tamanho da tela em que o site em é exibido</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box mt-5 mx-auto">
-                    <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
-                    <h3 class="mb-3">Made with Love</h3>
-                    <p class="text-muted mb-0">You have to make your websites with love these days!</p>
+                    <i class="fa fa-4x fa-play-circle text-primary mb-3 sr-icons"></i>
+                    <h3 class="mb-3">Video</h3>
+                    <p class="text-muted mb-0">Um processo artístico onde uma coleção de material de vídeo (sequências) é compilada e alterada a partir de sua forma original para criar uma nova versão.</p>
                 </div>
             </div>
         </div>
@@ -132,97 +130,7 @@ while ($dados = $consulta->fetch(PDO::FETCH_OBJ)) {
                     </div>
                 </a>
                 <form action="<?php echo $url_portifolio ?>" target="_blank">
-                    <button type="submit" target="_blank" class="link-portifolio">Visualizar pagina</button>
-                </form>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
-                    <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <form action="<?php echo $url_portifolio ?>" target="_blank">
-                    <button type="submit" target="_blank" class="link-portifolio">Visualizar pagina</button>
-                </form>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
-                    <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <form action="<?php echo $url_portifolio ?>" target="_blank">
-                    <button type="submit" target="_blank" class="link-portifolio">Visualizar pagina</button>
-                </form>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
-                    <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <form action="<?php echo $url_portifolio ?>" target="_blank">
-                    <button type="submit" target="_blank" class="link-portifolio">Visualizar pagina</button>
-                </form>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
-                    <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <form action="<?php echo $url_portifolio ?>" target="_blank">
-                    <button type="submit" target="_blank" class="link-portifolio">Visualizar pagina</button>
-                </form>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
-                    <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <form action="<?php echo $url_portifolio ?>" target="_blank">
-                    <button type="submit" target="_blank" class="link-portifolio">Visualizar pagina</button>
+                    <button type="submit" target="_blank" class="link-portifolio" title="Visualizar Portifólio <?php echo $id_categoria ?> ">Visualizar pagina</button>
                 </form>
             </div>
         </div>
@@ -250,8 +158,7 @@ if (isset($_GET["id"])) {
 }
 ?>
 <section id="contact">
-    <form name="form1" method="post" novalidate action="salvarcontato" enctype="multipart/form-data"
-          onsubmit="return valida_form(this)">
+    <form name="form1" id="form_contato" method="post" novalidate action="salvarcontato" enctype="multipart/form-data" onsubmit="return valida_form(this)">
         <input type="hidden" name="id"
                class="form-control" value="<?= $id_contato; ?>" readonly>
         <div class="container">
@@ -268,11 +175,10 @@ if (isset($_GET["id"])) {
                         <label for="nome" class="control-label" style="text-align: left;width: 100%;">* Nome:</label>
                         <div class="controls">
                             <div class="panel-body">
-                                <input type="text" required
+                                <input type="text" required=""
                                        name="nome"
                                        class="form-control" value="<?= $nome_contato; ?>"
-                                       data-validation-required-message="Preencha o Nome Completo"
-                                       placeholder="Preencha seu Nome completo">
+                                       data-validation-required-message="Preencha o Nome Completo" placeholder="Preencha seu nome completo" pattern="[a-zA-Z\s]+$">
                             </div>
                         </div>
                     </div>
@@ -285,8 +191,7 @@ if (isset($_GET["id"])) {
                                 <input type="text" required
                                        name="email"
                                        class="form-control" value="<?= $email_contato; ?>"
-                                       data-validation-required-message="Preencha o E-mail Completo"
-                                       placeholder="Preencha seu E-mail completo">
+                                       data-validation-required-message="Preencha o endereço de Email" placeholder="Preencha seu e-mail" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                             </div>
                         </div>
                     </div>
@@ -299,25 +204,24 @@ if (isset($_GET["id"])) {
                                 <input type="text" required
                                        name="assunto"
                                        class="form-control" value="<?= $assunto_contato; ?>"
-                                       data-validation-required-message="Preencha o Assunto Completo"
-                                       placeholder="Preencha seu Assunto completo">
+                                       data-validation-required-message="Preencha o assunto" placeholder="Descreve sobre o assunto" pattern="[a-zA-Z\s]+$">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-12 ml-auto text-center">
                     <div class="control-group">
-                        <label for="email" class="control-label" style="text-align: left;width: 100%;">* Mensagem:</label>
+                        <label for="mensagem" class="control-label" style="text-align: left;width: 100%;">* Mensagem:</label>
                         <div class="controls">
                             <div class="panel-body">
                                 <textarea type="text" required
                                           name="mensagem"
                                           class="form-control" value="<?= $mensagem_contato; ?>"
-                                          data-validation-required-message="Descreva a Mensagem" rows="6" cols="40"  maxlength="500" style="resize: none;" placeholder="Número Maximo de Caracteres: 1000"></textarea>
+                                          data-validation-required-message="Descreva a Mensagem" rows="6" cols="40"  maxlength="500" style="resize: none;" placeholder="Número Maximo de Caracteres: 1000" pattern="[a-zA-Z\s]+$"></textarea>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="margin-bottom: 20px; text">Enviar</button>
+                    <button type="submit" class="btn btn-primary" style="margin-bottom: 20px; text" title="Enviar Formulário de Contato">Enviar</button>
                 </div>
             </div>
         </div>
@@ -327,8 +231,27 @@ if (isset($_GET["id"])) {
 
 <section class="bg-dark text-white">
     <div class="container text-center">
-        <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-        <a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download
-            Now!</a>
+        <h4 class="mb-4">Redes Sociais</h4>
+        <a href="https://www.facebook.com/dudu18xb" target="_blank" title="Ir para o Perfil do Facebook">
+            <i class="fa fa-facebook-square"></i>
+        </a>
+        <a href="https://www.instagram.com/dudu18xb/" target="_blank" title="Ir para o Perfil do Instagram">
+            <i class="fa fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/dudu18XB" target="_blank" title="Ir para o Perfil do Twitter">
+            <i class="fa fa fa-twitter"></i>
+        </a>
+        <a href="https://www.youtube.com/c/dudu18XB" target="_blank" title="Ir para o Canal do Youtube">
+            <i class="fa fa-youtube-play"></i>
+        </a>
+        <a href="https://www.github.com/dudu18xb" target="_blank" title="Ir para o Perfil do GitHub">
+            <i class="fa fa-github"></i>
+        </a>
+        <a href="https://plus.google.com/u/0/+dudu18XB" target="_blank" title="Ir para o Perfil do Google Plus">
+            <i class="fa fa-google-plus-official"></i>
+        </a>
+        <a href="http://steamcommunity.com/id/dudu18xb" target="_blank"title="Ir para o Perfil da Steam">
+            <i class="fa fa-steam-square"></i>
+        </a>
     </div>
 </section>

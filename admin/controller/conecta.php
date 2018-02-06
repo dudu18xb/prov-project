@@ -1,11 +1,12 @@
 <?php
 //conectar com o banco de dados
 try {
-    //dados do servidor
+    //dados do servidor local
     $servidor = "localhost";
     $usuario = "root";
     $senha = "";
     $banco = "prov";
+
     $con = new PDO ( "mysql:host=$servidor;
 			dbname=$banco;
 			charset=utf8",

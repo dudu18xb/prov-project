@@ -1,15 +1,31 @@
 <?php include "controller/conecta.php" ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Developer Front-End | Eduardo Rocha</title>
-
+    <!-- <base href="https://eduardodev.com.br"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="format-detection" content="telephone=no">
+    <title>Eduardo Rocha | HOME</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="theme-color" content="#f05f40">
+    <meta name="nosnippets">
+    <meta property='og:title' content='Programador Front-End | Eduardo Rocha | Home' />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Author: Eduardo Rocha,Desenvolvedor Web Front-End Umuarama, Desenvolvedor Web Front-End Maringa, Desenvolvedor Web Front-End Curitiba,
+    Programador Front-End, Programador Back-End, Umuarama, PHP, HTML5, CSS3, JavaScript" />
+    <meta name="keywords" content="Programador Front-End, Programador Back-End, HTML 5, PHP7, CSS3, JavaScript,Desenvolvedor Web Front-End Umuarama, Desenvolvedor Web Front-End Maringa, Desenvolvedor Web Front-End Curitiba, Programador Web Umuarama, Programador Front-End Umuarama" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no" />
+    <meta name="author" content="Eduardo Rocha" />
+    <meta name="web_author" content="Eduardo Rocha" />
+    <meta name="copyright" content="© Eduardo Rocha" />
+    <meta name="robots" content="index,follow" />
+    <meta name="rating" content="general" />
+    <meta name="distribution" content="global">
+    <link rel="alternate" href="http://eduardodev.com.br" hreflang="pt-br" />
+    <meta property='og:description' content='Graduado em Sistemas para Internet, Estudante de Pós-graduação Web Dev na Faculdade Alfa de Umuarama, Curto muito Novidades na área de Front-End' />
+    <meta property='og:url' content='http://eduardodev.com.br/' />
     <!-- Bootstrap core CSS -->
+    <link href="images/icon.png" rel="shortcut icon">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/estilo.css" rel="stylesheet">
 
@@ -33,7 +49,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Eduardo Rocha</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top" title="Home">Eduardo Rocha</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -42,16 +58,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">Sobre</a>
+                    <a class="nav-link js-scroll-trigger" href="#about" title="Sobre Mim" alt="Sobre Mim">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#services">Serviços</a>
+                    <a class="nav-link js-scroll-trigger" href="#services" title="Serviços" alt="Serviços">Serviços</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#portfolio">Portfólio</a>
+                    <a class="nav-link js-scroll-trigger" href="#portfolio" title="Portifólio" alt="Portifólio">Portfólio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
+                    <a class="nav-link js-scroll-trigger" href="#contact" title="Entre em Contato" alt="Contato">Contato</a>
                 </li>
             </ul>
         </div>
@@ -87,7 +103,29 @@
 </main>
 
 <!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/eduardo.js"></script>
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+<script>
+    $(function(){
+        $("#form_contato").validate();
+    });
+</script>
+<script type="text/javascript">
+    $(function () {
+        $("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
+    });
+
+</script>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-113196390-1');
+</script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Plugin JavaScript -->
@@ -97,6 +135,8 @@
 
 <!-- Custom scripts for this template -->
 <script src="js/creative.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113196390-1"></script>
 
 </body>
 

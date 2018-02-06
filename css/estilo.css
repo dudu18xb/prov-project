@@ -55,3 +55,14 @@
     margin-bottom: 15px;
 }
 
+.bg-dark a{
+    font-size: 36px;
+    text-decoration: none;
+    padding: 10px;
+}
+.bg-dark a:hover{
+    color: #fff;
+}
+.error{
+    color:red
+}

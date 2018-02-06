@@ -5,30 +5,35 @@ include "controller/login.php";
 <html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="format-detection" content="telephone=no">
+    <title>Eduardo Rocha | Painel</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="theme-color" content="#f05f40">
+    <meta name="nosnippets">
+    <meta property='og:title' content='Desenvolvedor Web Umuarama| Eduardo Rocha | Home' />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Author: Eduardo Rocha,Desenvolvedor Web Front-End Umuarama, Desenvolvedor Web Front-End Maringa, Desenvolvedor Web Front-End Curitiba,
+    Programador Front-End, Programador Back-End, Umuarama, PHP, HTML5, CSS3, JavaScript" />
+    <meta name="keywords" content="Programador Front-End, Programador Back-End, HTML 5, PHP7, CSS3, JavaScript,Desenvolvedor Web Front-End Umuarama, Desenvolvedor Web Front-End Maringa, Desenvolvedor Web Front-End Curitiba, Programador Web Umuarama, Programador Front-End Umuarama" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no" />
+    <meta name="author" content="Eduardo Rocha" />
+    <meta name="Description" content="Author: A.N. Author,
+    Illustrator: P. Picture, Category: Books, Price: $17.99,
+    Length: 784 pages">
+    <meta name="web_author" content="Eduardo Rocha" />
+    <meta name="copyright" content="© Eduardo Rocha" />
+    <meta name="robots" content="index,follow" />
+    <meta name="rating" content="general" />
+    <meta name="distribution" content="global">
     <title>Developer Front-End | Eduardo Rocha</title>
-    <!-- Tell the browser to be responsive to screen width -->
+    <link href="../images/icon.png" rel="shortcut icon">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-    <!-- Ionicons -->
     <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
-    <!-- Theme style -->
     <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
-    <!-- Morris chart -->
-    <link rel="stylesheet" href="bower_components/morris.js/morris.css">
-    <!-- jvectormap -->
-    <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
-    <!-- Date Picker -->
-    <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-    <!-- Daterange picker -->
-    <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
-    <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -36,6 +41,15 @@ include "controller/login.php";
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-113196390-1');
+    </script>
+
     <![endif]-->
 
     <!-- Google Font -->
@@ -375,6 +389,19 @@ include "controller/login.php";
                         <li><a href="home.php?pg=listarportifolio"><i class="fa fa-joomla"></i> Portifólio</a></li>
                     </ul>
                 </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-object-ungroup"></i> <span>Painel</span>
+                        <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="https://clubehost.com.br:2096/" target="_blank"><i class="fa fa-envelope"></i> Acessar E-mail</a></li>
+                        <li><a href="https://www.clubehost.com.br/" target="_blank"><i class="fa fa-arrow-circle-o-up"></i> Hospedagem</a></li>
+                        <li><a href="https://analytics.google.com/analytics/web" target="_blank"><i class="fa fa-google"></i> Google Analytics</a></li>
+                    </ul>
+                </li>
             </ul>
                 <!-- final Eduardp -->
         </section>
@@ -617,27 +644,13 @@ include "controller/login.php";
 <!-- Bootstrap 3.3.7 -->
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Morris.js charts -->
-<script src="bower_components/raphael/raphael.min.js"></script>
 <script src="bower_components/morris.js/morris.min.js"></script>
 <!-- Sparkline -->
-<script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 <!-- jvectormap -->
 <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
 <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="bower_components/moment/min/moment.min.js"></script>
 <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-<!-- datepicker -->
-<script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<!-- Bootstrap WYSIHTML5 -->
 <script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-<!-- Slimscroll -->
-<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
