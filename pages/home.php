@@ -87,9 +87,12 @@ while ($dados = $consulta->fetch(PDO::FETCH_OBJ)) {
 </section>
 
 
+<section class='p-0' id='portfolio'>
+    <div class='container-fluid p-0'>
+        <div class='row no-gutters popup-gallery'>
 <?php
 $sql = "
-                        select
+                        select *,
                         p.id,
                         c.nome categoria,
                         p.nome nome,
@@ -109,30 +112,26 @@ while ($dados = $consulta->fetch(PDO::FETCH_OBJ)) {
     $foto_portifolio = $dados->foto;
     $foto_portifolio = "images/thumbnails/$foto_portifolio";
     $foto_portifolio = $foto_portifolio . "g.jpg";
-}
-?>
-<section class="p-0" id="portfolio">
-    <div class="container-fluid p-0">
-        <div class="row no-gutters popup-gallery">
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="<?php echo $foto_portifolio ?>" title="<?php echo $nome_portifolio ?>">
-                    <img class="img-fluid" src="<?php echo $foto_portifolio ?>" alt="<?php echo $nome_portifolio ?>"
-                         title="<?php echo $nome_portifolio ?>">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                <?php echo $id_categoria ?>
-                            </div>
-                            <div class="project-name">
-                                <?php echo $nome_portifolio ?>
-                            </div>
+
+    echo "
+        <div class='col-lg-4 col-sm-6'>
+                <a class='portfolio-box' href='$foto_portifolio' title='$nome_portifolio'>
+                    <img class='img-fluid' src='$foto_portifolio' 'alt='$nome_portifolio'
+                         title='php echo $nome_portifolio'>
+                    <div class='portfolio-box-caption'>
+                        <div class='portfolio-box-caption-content'>
+                            <div class='project-category text-faded'>$id_categoria</div>
+                            <div class='project-name'>$nome_portifolio</div>
                         </div>
                     </div>
                 </a>
-                <form action="<?php echo $url_portifolio ?>" target="_blank">
-                    <button type="submit" target="_blank" class="link-portifolio" title="Visualizar Portifólio <?php echo $id_categoria ?> ">Visualizar pagina</button>
+                <form action='$url_portifolio' target='_blank'>
+                    <button type='submit' target='_blank' class='link-portifolio' title='Visualizar Portifólio $nome_portifolio'>Visualizar pagina</button>
                 </form>
             </div>
+    ";
+
+} ?>        
         </div>
     </div>
 </section>
